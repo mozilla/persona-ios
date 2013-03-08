@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37D0D64F16EA984600055442 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D64E16EA984600055442 /* UIKit.framework */; };
+		37D0D65116EA984600055442 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D65016EA984600055442 /* Foundation.framework */; };
+		37D0D65316EA984600055442 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D65216EA984600055442 /* CoreGraphics.framework */; };
+		37D0D65916EA984600055442 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D65716EA984600055442 /* InfoPlist.strings */; };
+		37D0D65B16EA984600055442 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D65A16EA984600055442 /* main.m */; };
+		37D0D65F16EA984600055442 /* PAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D65E16EA984600055442 /* PAppDelegate.m */; };
+		37D0D66116EA984600055442 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D66016EA984600055442 /* Default.png */; };
+		37D0D66316EA984600055442 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D66216EA984600055442 /* Default@2x.png */; };
+		37D0D66516EA984600055442 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D66416EA984600055442 /* Default-568h@2x.png */; };
+		37D0D66816EA984600055442 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D66616EA984600055442 /* MainStoryboard_iPhone.storyboard */; };
+		37D0D66B16EA984600055442 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D66916EA984600055442 /* MainStoryboard_iPad.storyboard */; };
+		37D0D66E16EA984600055442 /* PViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D66D16EA984600055442 /* PViewController.m */; };
+		37D0D67616EA984600055442 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D67516EA984600055442 /* SenTestingKit.framework */; };
+		37D0D67716EA984600055442 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D64E16EA984600055442 /* UIKit.framework */; };
+		37D0D67816EA984600055442 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D65016EA984600055442 /* Foundation.framework */; };
+		37D0D68016EA984600055442 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D67E16EA984600055442 /* InfoPlist.strings */; };
+		37D0D68316EA984600055442 /* PersonaSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D68216EA984600055442 /* PersonaSDKDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37D0D67916EA984600055442 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37D0D64316EA984600055442 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37D0D64A16EA984600055442;
+			remoteInfo = PersonaSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37D0D64B16EA984600055442 /* PersonaSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonaSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D0D64E16EA984600055442 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		37D0D65016EA984600055442 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		37D0D65216EA984600055442 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		37D0D65616EA984600055442 /* PersonaSDKDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PersonaSDKDemo-Info.plist"; sourceTree = "<group>"; };
+		37D0D65816EA984600055442 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37D0D65A16EA984600055442 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37D0D65C16EA984600055442 /* PersonaSDKDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PersonaSDKDemo-Prefix.pch"; sourceTree = "<group>"; };
+		37D0D65D16EA984600055442 /* PAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAppDelegate.h; sourceTree = "<group>"; };
+		37D0D65E16EA984600055442 /* PAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAppDelegate.m; sourceTree = "<group>"; };
+		37D0D66016EA984600055442 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		37D0D66216EA984600055442 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		37D0D66416EA984600055442 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		37D0D66716EA984600055442 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		37D0D66A16EA984600055442 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		37D0D66C16EA984600055442 /* PViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PViewController.h; sourceTree = "<group>"; };
+		37D0D66D16EA984600055442 /* PViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PViewController.m; sourceTree = "<group>"; };
+		37D0D67416EA984600055442 /* PersonaSDKDemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonaSDKDemoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D0D67516EA984600055442 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		37D0D67D16EA984600055442 /* PersonaSDKDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PersonaSDKDemoTests-Info.plist"; sourceTree = "<group>"; };
+		37D0D67F16EA984600055442 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37D0D68116EA984600055442 /* PersonaSDKDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonaSDKDemoTests.h; sourceTree = "<group>"; };
+		37D0D68216EA984600055442 /* PersonaSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonaSDKDemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37D0D64816EA984600055442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D0D64F16EA984600055442 /* UIKit.framework in Frameworks */,
+				37D0D65116EA984600055442 /* Foundation.framework in Frameworks */,
+				37D0D65316EA984600055442 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D0D67016EA984600055442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D0D67616EA984600055442 /* SenTestingKit.framework in Frameworks */,
+				37D0D67716EA984600055442 /* UIKit.framework in Frameworks */,
+				37D0D67816EA984600055442 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37D0D64216EA984600055442 = {
+			isa = PBXGroup;
+			children = (
+				37D0D65416EA984600055442 /* PersonaSDKDemo */,
+				37D0D67B16EA984600055442 /* PersonaSDKDemoTests */,
+				37D0D64D16EA984600055442 /* Frameworks */,
+				37D0D64C16EA984600055442 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37D0D64C16EA984600055442 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37D0D64B16EA984600055442 /* PersonaSDKDemo.app */,
+				37D0D67416EA984600055442 /* PersonaSDKDemoTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37D0D64D16EA984600055442 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37D0D64E16EA984600055442 /* UIKit.framework */,
+				37D0D65016EA984600055442 /* Foundation.framework */,
+				37D0D65216EA984600055442 /* CoreGraphics.framework */,
+				37D0D67516EA984600055442 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37D0D65416EA984600055442 /* PersonaSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				37D0D65D16EA984600055442 /* PAppDelegate.h */,
+				37D0D65E16EA984600055442 /* PAppDelegate.m */,
+				37D0D66616EA984600055442 /* MainStoryboard_iPhone.storyboard */,
+				37D0D66916EA984600055442 /* MainStoryboard_iPad.storyboard */,
+				37D0D66C16EA984600055442 /* PViewController.h */,
+				37D0D66D16EA984600055442 /* PViewController.m */,
+				37D0D65516EA984600055442 /* Supporting Files */,
+			);
+			path = PersonaSDKDemo;
+			sourceTree = "<group>";
+		};
+		37D0D65516EA984600055442 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37D0D65616EA984600055442 /* PersonaSDKDemo-Info.plist */,
+				37D0D65716EA984600055442 /* InfoPlist.strings */,
+				37D0D65A16EA984600055442 /* main.m */,
+				37D0D65C16EA984600055442 /* PersonaSDKDemo-Prefix.pch */,
+				37D0D66016EA984600055442 /* Default.png */,
+				37D0D66216EA984600055442 /* Default@2x.png */,
+				37D0D66416EA984600055442 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37D0D67B16EA984600055442 /* PersonaSDKDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				37D0D68116EA984600055442 /* PersonaSDKDemoTests.h */,
+				37D0D68216EA984600055442 /* PersonaSDKDemoTests.m */,
+				37D0D67C16EA984600055442 /* Supporting Files */,
+			);
+			path = PersonaSDKDemoTests;
+			sourceTree = "<group>";
+		};
+		37D0D67C16EA984600055442 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37D0D67D16EA984600055442 /* PersonaSDKDemoTests-Info.plist */,
+				37D0D67E16EA984600055442 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37D0D64A16EA984600055442 /* PersonaSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D0D68616EA984600055442 /* Build configuration list for PBXNativeTarget "PersonaSDKDemo" */;
+			buildPhases = (
+				37D0D64716EA984600055442 /* Sources */,
+				37D0D64816EA984600055442 /* Frameworks */,
+				37D0D64916EA984600055442 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PersonaSDKDemo;
+			productName = PersonaSDKDemo;
+			productReference = 37D0D64B16EA984600055442 /* PersonaSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37D0D67316EA984600055442 /* PersonaSDKDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D0D68916EA984600055442 /* Build configuration list for PBXNativeTarget "PersonaSDKDemoTests" */;
+			buildPhases = (
+				37D0D66F16EA984600055442 /* Sources */,
+				37D0D67016EA984600055442 /* Frameworks */,
+				37D0D67116EA984600055442 /* Resources */,
+				37D0D67216EA984600055442 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37D0D67A16EA984600055442 /* PBXTargetDependency */,
+			);
+			name = PersonaSDKDemoTests;
+			productName = PersonaSDKDemoTests;
+			productReference = 37D0D67416EA984600055442 /* PersonaSDKDemoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37D0D64316EA984600055442 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = P;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Mozilla;
+			};
+			buildConfigurationList = 37D0D64616EA984600055442 /* Build configuration list for PBXProject "PersonaSDKDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 37D0D64216EA984600055442;
+			productRefGroup = 37D0D64C16EA984600055442 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37D0D64A16EA984600055442 /* PersonaSDKDemo */,
+				37D0D67316EA984600055442 /* PersonaSDKDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37D0D64916EA984600055442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D0D65916EA984600055442 /* InfoPlist.strings in Resources */,
+				37D0D66116EA984600055442 /* Default.png in Resources */,
+				37D0D66316EA984600055442 /* Default@2x.png in Resources */,
+				37D0D66516EA984600055442 /* Default-568h@2x.png in Resources */,
+				37D0D66816EA984600055442 /* MainStoryboard_iPhone.storyboard in Resources */,
+				37D0D66B16EA984600055442 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D0D67116EA984600055442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D0D68016EA984600055442 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37D0D67216EA984600055442 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37D0D64716EA984600055442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D0D65B16EA984600055442 /* main.m in Sources */,
+				37D0D65F16EA984600055442 /* PAppDelegate.m in Sources */,
+				37D0D66E16EA984600055442 /* PViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D0D66F16EA984600055442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D0D68316EA984600055442 /* PersonaSDKDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37D0D67A16EA984600055442 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37D0D64A16EA984600055442 /* PersonaSDKDemo */;
+			targetProxy = 37D0D67916EA984600055442 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37D0D65716EA984600055442 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D0D65816EA984600055442 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		37D0D66616EA984600055442 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D0D66716EA984600055442 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		37D0D66916EA984600055442 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D0D66A16EA984600055442 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		37D0D67E16EA984600055442 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D0D67F16EA984600055442 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37D0D68416EA984600055442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37D0D68516EA984600055442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37D0D68716EA984600055442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PersonaSDKDemo/PersonaSDKDemo-Prefix.pch";
+				INFOPLIST_FILE = "PersonaSDKDemo/PersonaSDKDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		37D0D68816EA984600055442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PersonaSDKDemo/PersonaSDKDemo-Prefix.pch";
+				INFOPLIST_FILE = "PersonaSDKDemo/PersonaSDKDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		37D0D68A16EA984600055442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PersonaSDKDemo.app/PersonaSDKDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PersonaSDKDemo/PersonaSDKDemo-Prefix.pch";
+				INFOPLIST_FILE = "PersonaSDKDemoTests/PersonaSDKDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		37D0D68B16EA984600055442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PersonaSDKDemo.app/PersonaSDKDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PersonaSDKDemo/PersonaSDKDemo-Prefix.pch";
+				INFOPLIST_FILE = "PersonaSDKDemoTests/PersonaSDKDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37D0D64616EA984600055442 /* Build configuration list for PBXProject "PersonaSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D0D68416EA984600055442 /* Debug */,
+				37D0D68516EA984600055442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37D0D68616EA984600055442 /* Build configuration list for PBXNativeTarget "PersonaSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D0D68716EA984600055442 /* Debug */,
+				37D0D68816EA984600055442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		37D0D68916EA984600055442 /* Build configuration list for PBXNativeTarget "PersonaSDKDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D0D68A16EA984600055442 /* Debug */,
+				37D0D68B16EA984600055442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37D0D64316EA984600055442 /* Project object */;
+}
