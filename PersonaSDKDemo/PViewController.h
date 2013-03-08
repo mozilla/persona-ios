@@ -7,7 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PersonaViewController.h"
+#import "PPersonaControllerDelegate_iPad.h"
+
+#define ORIGIN @"http://www.mozilla.com"
 
 @interface PViewController : UIViewController
+{
+  NSMutableData *userData;
+  NSMutableDictionary* userDict;
+  NSString* loggedInUser;
+  
+  PPersonaControllerDelegate_iPad* personaDelegate;
+  PersonaViewController* personaController;
+
+}
+
+- (void) userLogin: (NSNotification *)notification;
+- (void) userLogout: (NSNotification *)notification;
+
+- (IBAction)login:(id)sender;
 
 @end

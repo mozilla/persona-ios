@@ -24,6 +24,14 @@
 		37D0D67816EA984600055442 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D65016EA984600055442 /* Foundation.framework */; };
 		37D0D68016EA984600055442 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D67E16EA984600055442 /* InfoPlist.strings */; };
 		37D0D68316EA984600055442 /* PersonaSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D68216EA984600055442 /* PersonaSDKDemoTests.m */; };
+		37D0D69516EA98F000055442 /* PersonaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D69016EA98F000055442 /* PersonaViewController.m */; };
+		37D0D69616EA98F000055442 /* PersonaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D69016EA98F000055442 /* PersonaViewController.m */; };
+		37D0D69716EA998C00055442 /* assertion_inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D68D16EA98F000055442 /* assertion_inject.js */; };
+		37D0D69816EA998C00055442 /* logout_inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D68E16EA98F000055442 /* logout_inject.js */; };
+		37D0D69B16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D69A16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m */; };
+		37D0D69C16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D69A16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m */; };
+		37D0D69D16EAA45400055442 /* assertion_inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D68D16EA98F000055442 /* assertion_inject.js */; };
+		37D0D69E16EAA45400055442 /* logout_inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D68E16EA98F000055442 /* logout_inject.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,12 @@
 		37D0D67F16EA984600055442 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		37D0D68116EA984600055442 /* PersonaSDKDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonaSDKDemoTests.h; sourceTree = "<group>"; };
 		37D0D68216EA984600055442 /* PersonaSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonaSDKDemoTests.m; sourceTree = "<group>"; };
+		37D0D68D16EA98F000055442 /* assertion_inject.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = assertion_inject.js; sourceTree = "<group>"; };
+		37D0D68E16EA98F000055442 /* logout_inject.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = logout_inject.js; sourceTree = "<group>"; };
+		37D0D68F16EA98F000055442 /* PersonaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonaViewController.h; sourceTree = "<group>"; };
+		37D0D69016EA98F000055442 /* PersonaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonaViewController.m; sourceTree = "<group>"; };
+		37D0D69916EA9BD600055442 /* PPersonaControllerDelegate_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPersonaControllerDelegate_iPad.h; sourceTree = "<group>"; };
+		37D0D69A16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPersonaControllerDelegate_iPad.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +133,9 @@
 		37D0D65416EA984600055442 /* PersonaSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				37D0D68C16EA98F000055442 /* PersonaSDK */,
+				37D0D69916EA9BD600055442 /* PPersonaControllerDelegate_iPad.h */,
+				37D0D69A16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m */,
 				37D0D65D16EA984600055442 /* PAppDelegate.h */,
 				37D0D65E16EA984600055442 /* PAppDelegate.m */,
 				37D0D66616EA984600055442 /* MainStoryboard_iPhone.storyboard */,
@@ -161,6 +178,17 @@
 				37D0D67E16EA984600055442 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37D0D68C16EA98F000055442 /* PersonaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				37D0D68D16EA98F000055442 /* assertion_inject.js */,
+				37D0D68E16EA98F000055442 /* logout_inject.js */,
+				37D0D68F16EA98F000055442 /* PersonaViewController.h */,
+				37D0D69016EA98F000055442 /* PersonaViewController.m */,
+			);
+			path = PersonaSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +263,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D0D69716EA998C00055442 /* assertion_inject.js in Resources */,
+				37D0D69816EA998C00055442 /* logout_inject.js in Resources */,
 				37D0D65916EA984600055442 /* InfoPlist.strings in Resources */,
 				37D0D66116EA984600055442 /* Default.png in Resources */,
 				37D0D66316EA984600055442 /* Default@2x.png in Resources */,
@@ -248,6 +278,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D0D69D16EAA45400055442 /* assertion_inject.js in Resources */,
+				37D0D69E16EAA45400055442 /* logout_inject.js in Resources */,
 				37D0D68016EA984600055442 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +310,8 @@
 				37D0D65B16EA984600055442 /* main.m in Sources */,
 				37D0D65F16EA984600055442 /* PAppDelegate.m in Sources */,
 				37D0D66E16EA984600055442 /* PViewController.m in Sources */,
+				37D0D69516EA98F000055442 /* PersonaViewController.m in Sources */,
+				37D0D69B16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D0D68316EA984600055442 /* PersonaSDKDemoTests.m in Sources */,
+				37D0D69616EA98F000055442 /* PersonaViewController.m in Sources */,
+				37D0D69C16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
