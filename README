@@ -20,4 +20,5 @@ What does this code do:
 What doesn't this code do:
 --------------------------
 - handle all error cases
+- have any tests yet (oops)
 - lots of other things, I suspect.  Patches welcome.
