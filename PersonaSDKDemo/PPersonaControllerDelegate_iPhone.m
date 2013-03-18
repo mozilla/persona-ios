@@ -1,15 +1,15 @@
 //
-//  PersonaDisplayController_iPad.m
+//  PersonaDisplayController_iPhone.m
 //  PersonaTest
 //
 //  Created by Dan Walkowski on 10/23/12.
 //  Copyright (c) 2012 Mozilla. All rights reserved.
 //
 
-#import "PPersonaControllerDelegate_iPad.h"
+#import "PPersonaControllerDelegate_iPhone.h"
+#import "PLoginController_iPhone.h"
 
-
-@implementation PPersonaControllerDelegate_iPad
+@implementation PPersonaControllerDelegate_iPhone
 
 - (void)didReceiveMemoryWarning
 {
@@ -17,16 +17,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (id)initWithContentController:(UIViewController *)contentController
+- (id)initWithContentController:(UIViewController*)contentController
 {
   if (self = [super init])
   {
-    CGSize loginSize = CGSizeMake(340, 440);  //hard-coded size for iPad for now
-    contentController.view.frame = CGRectMake(0, 0, loginSize.width, loginSize.height);
-    loginPopover = [[UIPopoverController alloc] initWithContentViewController:contentController];
-    loginPopover.delegate = self;
-    
-    [loginPopover setPopoverContentSize:loginSize animated:YES];
+
+    loginController = [[PLoginController_iPhone alloc] init];
+
+    contentController.view.frame = loginController.view.frame;
+    [loginController addChildViewController:contentController];
+    [loginController.view addSubview:contentController.view];
   }
   return self;
 }
@@ -44,23 +44,10 @@
 }
 
 
-- (void) doLoginFrom:(id)uiElement
+//uiElement is ignored in the iPhone case
+- (void) doLoginFrom:(id)ownerViewController;
 {
-  //This code handles displaying the login popover from any type of UIElement.  I prefer BarButtons.
-  if ([uiElement isMemberOfClass:[UIBarButtonItem class]])
-  {
-    [loginPopover presentPopoverFromBarButtonItem:uiElement permittedArrowDirections:UIPopoverArrowDirectionAny animated:TRUE];
-  }
-  else if ([[uiElement class] isSubclassOfClass:[UIView class]])
-  {
-    UIView* triggerView = (UIView*)uiElement;
-   [loginPopover presentPopoverFromRect:triggerView.frame inView:[triggerView superview] permittedArrowDirections:UIPopoverArrowDirectionAny animated:TRUE];
-  }
-
-}
-
-- (void) popoverControllerDidDismissPopover: (UIPopoverController*) popover
-{
+  [ownerViewController presentViewController:loginController animated:YES completion:nil];
 }
 
 - (void) personaViewControllerDidSucceedLogout: (PersonaViewController*) pvc
@@ -139,7 +126,8 @@
 
   [[NSNotificationCenter defaultCenter] postNotificationName:personaLoginMessage object:self userInfo:receipt];
   
-  [loginPopover dismissPopoverAnimated:TRUE];
+  [loginController dismiss];
+    //CLOSE THE MODAL PAGE
 }
 
 - (void) personaViewController: (PersonaViewController*) pvc didFailVerificationWithError: (NSError*) error
@@ -147,6 +135,7 @@
   NSLog(@"Failed verification with error: %@", error);
   
 }
+
 
 
 @end

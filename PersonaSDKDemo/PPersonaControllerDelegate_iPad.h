@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "PersonaViewController.h"
-#import"PPersonaControllerDelegate_iPad.h"
 
 @interface PPersonaControllerDelegate_iPad : UIViewController <UIPopoverControllerDelegate, PersonaViewControllerDelegate>
 {
   UIPopoverController* loginPopover;
 }
 
-- (id)initWithSize:(CGSize)aSize andContentController: (UIViewController*) contentController;
+- (id)initWithContentController: (UIViewController*) contentController;
 - (void) doLoginFrom:(id)uiElement;
 - (void) doLogout;
 

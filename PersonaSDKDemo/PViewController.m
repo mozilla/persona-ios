@@ -7,6 +7,7 @@
 //
 
 #import "PViewController.h"
+#import "PLoginController_iPhone.h"
 
 @interface PViewController ()
 
@@ -17,13 +18,6 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  CGSize loginSize = CGSizeMake(340, 440);
-  
-  // Do any additional setup after loading the view, typically from a nib.
-  personaController = [[PersonaViewController alloc] initWithFrame: CGRectMake(0, 0, loginSize.width, loginSize.height) andOrigin:ORIGIN ];
-  
-  personaDelegate = [[PPersonaControllerDelegate_iPad alloc] initWithSize: loginSize andContentController:personaController];
-  personaController.delegate = personaDelegate;
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,7 +82,22 @@
 
 - (IBAction)login:(id)sender
 {
-  [personaDelegate doLoginFrom:sender];
+  personaController = [[PersonaViewController alloc] initWithOrigin:ORIGIN ];
+
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+  {
+    personaDelegate = [[PPersonaControllerDelegate_iPad alloc] initWithContentController:personaController];
+    [personaDelegate doLoginFrom:sender];
+  }
+  else
+  {
+    personaDelegate = [[PPersonaControllerDelegate_iPhone alloc] initWithContentController:personaController];
+    [personaDelegate doLoginFrom:self];
+  }
+
+  personaController.delegate = personaDelegate;
+
+
 }
 
 - (IBAction)logout
@@ -107,11 +116,10 @@
 }
 
 - (void) setupPersonaEventHandlers
-{
+{ 
   //Set up notification handlers for login and logout
   [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(userLogin:) name: personaLoginMessage object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(userLogout:) name: personaLogoutMessage object:nil];
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @end

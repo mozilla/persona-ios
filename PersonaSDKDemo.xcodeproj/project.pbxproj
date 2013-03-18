@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		375F01AE16EFAE620034E620 /* PLoginController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F01AC16EFAE620034E620 /* PLoginController_iPhone.m */; };
+		375F01AF16EFAE620034E620 /* PLoginController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375F01AD16EFAE620034E620 /* PLoginController_iPhone.xib */; };
+		3778647516F7ABE50076E550 /* proxy.js in Sources */ = {isa = PBXBuildFile; fileRef = 3778647416F7ABE50076E550 /* proxy.js */; };
 		37D0D64F16EA984600055442 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D64E16EA984600055442 /* UIKit.framework */; };
 		37D0D65116EA984600055442 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D65016EA984600055442 /* Foundation.framework */; };
 		37D0D65316EA984600055442 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D65216EA984600055442 /* CoreGraphics.framework */; };
@@ -32,6 +35,8 @@
 		37D0D69C16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D69A16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m */; };
 		37D0D69D16EAA45400055442 /* assertion_inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D68D16EA98F000055442 /* assertion_inject.js */; };
 		37D0D69E16EAA45400055442 /* logout_inject.js in Resources */ = {isa = PBXBuildFile; fileRef = 37D0D68E16EA98F000055442 /* logout_inject.js */; };
+		37D0D6A116EAC25100055442 /* PPersonaControllerDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D6A016EAC25100055442 /* PPersonaControllerDelegate_iPhone.m */; };
+		37D0D6A216EAC25100055442 /* PPersonaControllerDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D6A016EAC25100055442 /* PPersonaControllerDelegate_iPhone.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		375F01AB16EFAE620034E620 /* PLoginController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLoginController_iPhone.h; sourceTree = "<group>"; };
+		375F01AC16EFAE620034E620 /* PLoginController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLoginController_iPhone.m; sourceTree = "<group>"; };
+		375F01AD16EFAE620034E620 /* PLoginController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLoginController_iPhone.xib; sourceTree = "<group>"; };
+		3778647416F7ABE50076E550 /* proxy.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = proxy.js; sourceTree = "<group>"; };
 		37D0D64B16EA984600055442 /* PersonaSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonaSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D0D64E16EA984600055442 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37D0D65016EA984600055442 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -74,6 +83,8 @@
 		37D0D69016EA98F000055442 /* PersonaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonaViewController.m; sourceTree = "<group>"; };
 		37D0D69916EA9BD600055442 /* PPersonaControllerDelegate_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPersonaControllerDelegate_iPad.h; sourceTree = "<group>"; };
 		37D0D69A16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPersonaControllerDelegate_iPad.m; sourceTree = "<group>"; };
+		37D0D69F16EAC25100055442 /* PPersonaControllerDelegate_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPersonaControllerDelegate_iPhone.h; sourceTree = "<group>"; };
+		37D0D6A016EAC25100055442 /* PPersonaControllerDelegate_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPersonaControllerDelegate_iPhone.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,12 +147,18 @@
 				37D0D68C16EA98F000055442 /* PersonaSDK */,
 				37D0D69916EA9BD600055442 /* PPersonaControllerDelegate_iPad.h */,
 				37D0D69A16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m */,
+				37D0D69F16EAC25100055442 /* PPersonaControllerDelegate_iPhone.h */,
+				37D0D6A016EAC25100055442 /* PPersonaControllerDelegate_iPhone.m */,
+				375F01AB16EFAE620034E620 /* PLoginController_iPhone.h */,
+				375F01AC16EFAE620034E620 /* PLoginController_iPhone.m */,
+				375F01AD16EFAE620034E620 /* PLoginController_iPhone.xib */,
 				37D0D65D16EA984600055442 /* PAppDelegate.h */,
 				37D0D65E16EA984600055442 /* PAppDelegate.m */,
 				37D0D66616EA984600055442 /* MainStoryboard_iPhone.storyboard */,
 				37D0D66916EA984600055442 /* MainStoryboard_iPad.storyboard */,
 				37D0D66C16EA984600055442 /* PViewController.h */,
 				37D0D66D16EA984600055442 /* PViewController.m */,
+				3778647416F7ABE50076E550 /* proxy.js */,
 				37D0D65516EA984600055442 /* Supporting Files */,
 			);
 			path = PersonaSDKDemo;
@@ -271,6 +288,7 @@
 				37D0D66516EA984600055442 /* Default-568h@2x.png in Resources */,
 				37D0D66816EA984600055442 /* MainStoryboard_iPhone.storyboard in Resources */,
 				37D0D66B16EA984600055442 /* MainStoryboard_iPad.storyboard in Resources */,
+				375F01AF16EFAE620034E620 /* PLoginController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +330,9 @@
 				37D0D66E16EA984600055442 /* PViewController.m in Sources */,
 				37D0D69516EA98F000055442 /* PersonaViewController.m in Sources */,
 				37D0D69B16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m in Sources */,
+				37D0D6A116EAC25100055442 /* PPersonaControllerDelegate_iPhone.m in Sources */,
+				375F01AE16EFAE620034E620 /* PLoginController_iPhone.m in Sources */,
+				3778647516F7ABE50076E550 /* proxy.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +343,7 @@
 				37D0D68316EA984600055442 /* PersonaSDKDemoTests.m in Sources */,
 				37D0D69616EA98F000055442 /* PersonaViewController.m in Sources */,
 				37D0D69C16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m in Sources */,
+				37D0D6A216EAC25100055442 /* PPersonaControllerDelegate_iPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +526,7 @@
 				37D0D68816EA984600055442 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37D0D68916EA984600055442 /* Build configuration list for PBXNativeTarget "PersonaSDKDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +535,7 @@
 				37D0D68B16EA984600055442 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

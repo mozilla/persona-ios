@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "PersonaViewController.h"
 #import "PPersonaControllerDelegate_iPad.h"
+#import "PPersonaControllerDelegate_iPhone.h"
+#import "PLoginController_iPhone.h"
 
 #define ORIGIN @"http://www.mozilla.com"
 
@@ -18,9 +20,8 @@
   NSMutableDictionary* userDict;
   NSString* loggedInUser;
   
-  PPersonaControllerDelegate_iPad* personaDelegate;
+  id personaDelegate;
   PersonaViewController* personaController;
-
 }
 
 - (void) userLogin: (NSNotification *)notification;
