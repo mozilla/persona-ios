@@ -1,0 +1,23 @@
+Persona iOS sdk
+---------------
+
+This project was originally based on the BrowserID code by Stefan Arentz, but has been significantly modified.
+
+This is an sdk, an example app, and a trivial server, showing how to use persona sign-in with iOS, and includes UI for iPod/iPhone/iPad. The code assumes iOS 6, and ARC, and requires the trivial server 'proxy.js' running on your local machine:
+
+> node proxy.js
+
+It opens two local ports, pretending to be a backend server/website, trying to authenticate a user.
+
+What does this code do:
+-----------------------
+- show you how to use Persona to authenticate users for your site from a native iOS application
+- provide working UI for all current iOS devices.
+- demonstrate the use of the lower level Persona Internal API
+- uses extremely fake hard-coded session 'cookies' provided by proxy.js
+
+
+What doesn't this code do:
+--------------------------
+- handle all error cases
+- lots of other things, I suspect.  Patches welcome.
