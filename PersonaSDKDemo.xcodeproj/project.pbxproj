@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		375F01AE16EFAE620034E620 /* PLoginController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 375F01AC16EFAE620034E620 /* PLoginController_iPhone.m */; };
 		375F01AF16EFAE620034E620 /* PLoginController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 375F01AD16EFAE620034E620 /* PLoginController_iPhone.xib */; };
-		3778647516F7ABE50076E550 /* proxy.js in Sources */ = {isa = PBXBuildFile; fileRef = 3778647416F7ABE50076E550 /* proxy.js */; };
 		37D0D64F16EA984600055442 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D64E16EA984600055442 /* UIKit.framework */; };
 		37D0D65116EA984600055442 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D65016EA984600055442 /* Foundation.framework */; };
 		37D0D65316EA984600055442 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D0D65216EA984600055442 /* CoreGraphics.framework */; };
@@ -332,7 +331,6 @@
 				37D0D69B16EA9BD600055442 /* PPersonaControllerDelegate_iPad.m in Sources */,
 				37D0D6A116EAC25100055442 /* PPersonaControllerDelegate_iPhone.m in Sources */,
 				375F01AE16EFAE620034E620 /* PLoginController_iPhone.m in Sources */,
-				3778647516F7ABE50076E550 /* proxy.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
