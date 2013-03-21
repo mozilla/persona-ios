@@ -148,6 +148,8 @@
 {
   NSLog(@"Failed verification with error: %@", error);
   
+  [loginPopover dismissPopoverAnimated:TRUE];
+
 }
 
 

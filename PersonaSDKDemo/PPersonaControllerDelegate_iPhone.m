@@ -136,6 +136,8 @@
 {
   NSLog(@"Failed verification with error: %@", error);
   
+  [loginController dismiss];
+
 }
 
 
