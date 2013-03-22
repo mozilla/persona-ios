@@ -9,9 +9,10 @@
 
 #import "PersonaViewController.h"
 
-#ifndef __has_feature
-#define __has_feature(x) 0
-#endif
+NSString* const PersonaLoginNotification = @"personaLoginNotification";
+NSString* const PersonaLogoutNotification = @"personaLogoutNotification";
+NSString* const PersonaCancelNotification = @"personaCancelNotification";
+
 
 static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE";
 
@@ -35,7 +36,7 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
       self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
       _origin = origin;
-      [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(logout:) name: personaLogoutMessage object:nil];
+      [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(logout:) name: PersonaLogoutNotification object:nil];
 
     }
     return self;

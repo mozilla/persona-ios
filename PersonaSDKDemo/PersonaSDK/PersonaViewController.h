@@ -9,9 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define personaLoginMessage @"personaLogin"
-#define personaLogoutMessage @"personaLogout"
-#define personaCancelMessage @"personaCancel"
+
 
 
 typedef void (^URLConnectionHandler)(NSURLResponse*, NSData*, NSError*);
@@ -21,6 +19,24 @@ typedef void (^URLConnectionHandler)(NSURLResponse*, NSData*, NSError*);
 
 @protocol PersonaViewControllerDelegate <NSObject>
 //All of these calls are to let the delegate know that the persona controller has changed state in some way.
+
+//Three important notifications sent by the PersonaViewController on significant events.
+//They are not sent by PersonaViewController itself, but by its delegate.
+//--------
+//PersonaLoginNotification is sent by the delegate when a login has successfully occurred.
+//Objects that need to respond to this event should register for it. Multiple occurrences are possible.
+//The userInfo, for this demo application, contains the receipt, an NSData containing JSON.
+extern NSString* const PersonaLoginNotification;
+
+//PersonaLogoutNotification is sent by the delegate when a successful logout has occurred.
+//Objects that need to respond to this event should register for it. Multiple occurrences are possible.
+//The userInfo is nil.
+extern NSString* const PersonaLogoutNotification;
+
+//PersonaCancelNotification is sent by the delegate when cancels the login window from inside the webview.
+//Objects that need to respond to this event should register for it, so that the native UI can be closed when the embedded view is.
+//The userInfo is nil.
+extern NSString* const PersonaCancelNotification;
 
 //When the user clicks the cancel button in the persona dialog, this is used to inform the delegate
 - (void) personaViewControllerDidCancel: (PersonaViewController*) pvc;

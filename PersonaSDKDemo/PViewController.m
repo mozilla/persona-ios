@@ -39,7 +39,6 @@
   
   //This sample snippet assumes the receipt came directly from, or was forwarded from the Persona Verification server
   NSDictionary* verificationServerResponse = [notification userInfo];
-  NSLog(@"App Delegate received user login notification with verified receipt: %@", verificationServerResponse);
   
   if ([[verificationServerResponse objectForKey:@"status"] isEqualToString:@"okay"])
   {
@@ -122,8 +121,8 @@
 - (void) setupPersonaEventHandlers
 { 
   //Set up notification handlers for login and logout
-  [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(userLogin:) name: personaLoginMessage object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(userLogout:) name: personaLogoutMessage object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(userLogin:) name: PersonaLoginNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(userLogout:) name: PersonaLogoutNotification object:nil];
 }
 
 @end

@@ -42,7 +42,7 @@
   //Tell anyont who cares (in particular the PersonaViewController) that user wishes to logout.
   // If/when that is successful, we get the didSucceedLogout callback
 
-  [[NSNotificationCenter defaultCenter] postNotificationName:personaLogoutMessage object:self userInfo:nil];
+  [[NSNotificationCenter defaultCenter] postNotificationName:PersonaLogoutNotification object:self userInfo:nil];
 }
 
 
@@ -139,7 +139,7 @@
 {
   //NSLog(@"got receipt: %@", receipt);
 
-  [[NSNotificationCenter defaultCenter] postNotificationName:personaLoginMessage object:self userInfo:receipt];
+  [[NSNotificationCenter defaultCenter] postNotificationName:PersonaLoginNotification object:self userInfo:receipt];
   
   [loginPopover dismissPopoverAnimated:TRUE];
 }
