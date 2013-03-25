@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -44,16 +44,41 @@
                                     <action selector="logout" destination="2" eventType="touchUpInside" id="WGM-Hr-YkW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Logged in as:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzL-kW-mJi">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="Esd-SC-MVU"/>
+                                    <constraint firstAttribute="height" constant="21" id="Ntp-d7-xnu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVU-DU-MVz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="XlB-uH-nVA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.078327621050000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BzL-kW-mJi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="82" id="5qW-jf-LnK"/>
                             <constraint firstItem="Ao1-HQ-N9M" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="B5X-Yl-jIW"/>
+                            <constraint firstItem="BzL-kW-mJi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CeC-Jd-Fhh"/>
                             <constraint firstItem="eQ9-eQ-clh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="LFJ-G3-nXH"/>
                             <constraint firstAttribute="trailing" secondItem="eQ9-eQ-clh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MvW-3k-005"/>
+                            <constraint firstAttribute="trailing" secondItem="YVU-DU-MVz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Qk3-Ea-dBI"/>
+                            <constraint firstItem="YVU-DU-MVz" firstAttribute="top" secondItem="3" secondAttribute="top" constant="123" id="Zwx-FP-vJO"/>
                             <constraint firstItem="eQ9-eQ-clh" firstAttribute="bottom" secondItem="Ao1-HQ-N9M" secondAttribute="bottom" type="default" id="aYy-Bd-pif"/>
                             <constraint firstItem="Ao1-HQ-N9M" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="swz-JZ-Csc"/>
+                            <constraint firstItem="YVU-DU-MVz" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="xpw-5x-QmL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentUser" destination="YVU-DU-MVz" id="W29-8K-Paa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,6 +93,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PViewController.h"/>
             <relationships>
                 <relationship kind="action" name="login:"/>
+                <relationship kind="outlet" name="currentUser" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

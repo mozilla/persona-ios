@@ -43,6 +43,8 @@
   if ([[verificationServerResponse objectForKey:@"status"] isEqualToString:@"okay"])
   {
     loggedInUser = [verificationServerResponse objectForKey:@"email"];
+    _currentUser.text = loggedInUser;
+
     NSLog(@"Logged In: %@", loggedInUser);
     NSLog(@"Full receipt: %@", verificationServerResponse);
     //And now do all the normal work of loading the logged-in user's content and displaying it.
@@ -114,6 +116,7 @@
   //The 'personaLogoutMessage' is received when a logout call was made to the PersonaLoginController, and the local Persona state has been cleared.
   // You should now clear any app-specific login state (cookies, etc.) and reset the user interface to default.
   NSLog(@"ViewController received user logout notification");
+  _currentUser.text = nil;
   userDict = nil;
   
 }

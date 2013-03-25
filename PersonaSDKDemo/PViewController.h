@@ -31,4 +31,6 @@
 
 - (IBAction)login:(id)sender;
 
+@property (nonatomic,strong) IBOutlet UILabel* currentUser;
+
 @end
