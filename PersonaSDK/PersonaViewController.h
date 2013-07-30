@@ -1,5 +1,6 @@
-// personaViewController.h
-//  PersonaSDKDemo
+//
+// PersonaViewController.h
+// PersonaSDK
 //
 // Created by Dan Walkowski dwalkowski@mozilla.com
 
@@ -8,8 +9,6 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #import <UIKit/UIKit.h>
-
-
 
 
 typedef void (^URLConnectionHandler)(NSURLResponse*, NSData*, NSError*);
@@ -65,14 +64,10 @@ extern NSString* const PersonaCancelNotification;
 //The notifications used are at the top of this file
 
 @interface PersonaViewController : UIViewController <UIWebViewDelegate>
-{
-}
 
-- (id)    initWithOrigin:(NSString*)origin;
-- (void)  verifyAssertion: (NSString*) assertion againstServer: (NSURL*)server completionHandler: (URLConnectionHandler)completion;
-
-- (void) logout:(NSNotification *)notification;
-
+- (instancetype)initWithOrigin:(NSString *)origin;
+- (void)verifyAssertion:(NSString *)assertion againstServer:(NSURL *)server completionHandler:(URLConnectionHandler)completion;
+- (void)logout:(NSNotification *)notification;
 
 @property (nonatomic,strong) UIWebView* webView;
 @property (nonatomic,weak) id<PersonaViewControllerDelegate> delegate;
