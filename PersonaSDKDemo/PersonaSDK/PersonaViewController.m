@@ -62,19 +62,16 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
 	[_webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString: kPersonaSignInURL]]];
 }
 
-//- (void) viewDidUnload
-//{
-//  [super viewDidUnload];
-//}
-
-- (void) logout:(NSNotification *)notification
+- (void)logout:(NSNotification *)notification
 {
-  NSString* injectedCodePath = [[NSBundle mainBundle] pathForResource: @"logout_inject" ofType: @"js"];
+	NSString* injectedCodePath = [[NSBundle mainBundle] pathForResource: @"logout_inject" ofType: @"js"];
 	NSString* injection = [NSString stringWithContentsOfFile: injectedCodePath encoding:NSUTF8StringEncoding error: nil];
-  
+	
 	NSString* result = [_webView stringByEvaluatingJavaScriptFromString: injection];
-  if (result) NSLog(@"logout success: %@", result);
-  else NSLog(@"logout failed");
+#if DEBUG
+	if (result) NSLog(@"logout success: %@", result);
+	else NSLog(@"logout failed");
+#endif
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)ourWebView
@@ -93,10 +90,16 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
 	}
 	
 	NSString* injectedCode = [NSString stringWithFormat: injectedCodeTemplate, _origin];
-  
+	
 	NSString* result = [ourWebView stringByEvaluatingJavaScriptFromString: injectedCode];
-  if (result) NSLog(@"injection success: %@", result);
-  else NSLog(@"injection failed");
+	(void)result;
+#if DEBUG
+	if (result) NSLog(@"injection success: %@", result);
+	else NSLog(@"injection failed");
+#endif
+
+	// regain focus so iPad can open the keyboard
+	[self.view.window makeKeyAndVisible];
 }
 
 
