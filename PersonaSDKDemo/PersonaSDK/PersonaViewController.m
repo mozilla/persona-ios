@@ -117,13 +117,18 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
 
 - (void)verifyAssertion:(NSString*)assertion againstServer:(NSURL*)server completionHandler:(URLConnectionHandler)completion
 {
+	[self verifyAssertion:assertion bodyFormat:@"{\"assertion\":\"%@\"}" againstServer:server completionHandler:completion];
+}
+
+- (void)verifyAssertion:(NSString*)assertion bodyFormat:(NSString*)format againstServer:(NSURL*)server completionHandler:(URLConnectionHandler)completion
+{
     // POST the assertion to the verification endpoint. Then report back to our delegate about the
     // results.
-  
+
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL: server cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 5];
-    
-    NSString* jsonContent = [NSString stringWithFormat:@"{\"assertion\":\"%@\"}", assertion];
-    
+
+    NSString* jsonContent = [NSString stringWithFormat:format, assertion];
+
     [request setHTTPShouldHandleCookies: YES];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:[jsonContent dataUsingEncoding: NSUTF8StringEncoding]];
@@ -163,5 +168,4 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
 	// for all other requests, just load them :)
 	return YES;
 }
-
 @end

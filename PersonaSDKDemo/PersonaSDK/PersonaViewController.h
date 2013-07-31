@@ -69,6 +69,7 @@ extern NSString* const PersonaCancelNotification;
 }
 
 - (id)initWithOrigin:(NSString*)origin;
+- (void)verifyAssertion:(NSString*)assertion bodyFormat:(NSString*)format againstServer:(NSURL*)server completionHandler:(URLConnectionHandler)completion;
 - (void)verifyAssertion:(NSString*)assertion againstServer:(NSURL*)server completionHandler:(URLConnectionHandler)completion;
 - (void)logout:(NSNotification *)notification;
 
