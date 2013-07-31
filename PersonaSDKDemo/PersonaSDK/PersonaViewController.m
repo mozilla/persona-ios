@@ -160,16 +160,7 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
 
 		return NO;
 	}
-  else if ([[[url scheme] lowercaseString] isEqualToString: @"http"] || [[[url scheme] lowercaseString] isEqualToString: @"https"])
-  {
-      // If the user clicked on a link that escapes the persona dialog, then we open it in Safari
-      if ([[url absoluteString] isEqualToString: kPersonaSignInURL] == NO)
-      {
-          [[UIApplication sharedApplication] openURL: url];
-          return NO;
-      }
-  }
-	
+	// for all other requests, just load them :)
 	return YES;
 }
 
