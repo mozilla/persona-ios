@@ -39,19 +39,19 @@ extern NSString* const PersonaLogoutNotification;
 extern NSString* const PersonaCancelNotification;
 
 //When the user clicks the cancel button in the persona dialog, this is used to inform the delegate
-- (void) personaViewControllerDidCancel: (PersonaViewController*) pvc;
+- (void)personaViewControllerDidCancel: (PersonaViewController*) pvc;
 //When the user tells the native UI to logout, an NSNotifcation is sent to the PersonaViewController.
 //When logout is finished successfully, the deldgate is signalled with this.
-- (void) personaViewControllerDidSucceedLogout: (PersonaViewController*) pvc;
+- (void)personaViewControllerDidSucceedLogout: (PersonaViewController*) pvc;
 
 //When the persona controller fails to get an assertion for some reason from the backend, this is used to inform the delegate
-- (void) personaViewController: (PersonaViewController*) pvc didFailWithReason: (NSString*) reason;
+- (void)personaViewController: (PersonaViewController*) pvc didFailWithReason: (NSString*) reason;
 //When the persona controller successfully gets an assertion from the backend, this is used to inform the delegate
-- (void) personaViewController: (PersonaViewController*) pvc didSucceedWithAssertion: (NSString*) assertion;
+- (void)personaViewController: (PersonaViewController*) pvc didSucceedWithAssertion: (NSString*) assertion;
 //When the persona controller successfully verifies an assertion, this is used to inform the delegate
-- (void) personaViewController: (PersonaViewController*) pvc didSucceedVerificationWithReceipt: (NSDictionary*) receipt;
+- (void)personaViewController: (PersonaViewController*) pvc didSucceedVerificationWithReceipt: (NSDictionary*) receipt;
 //When the persona controller fails to verify an assertion, this is used to inform the delegate
-- (void) personaViewController: (PersonaViewController*) pvc didFailVerificationWithError: (NSError*) error;
+- (void)personaViewController: (PersonaViewController*) pvc didFailVerificationWithError: (NSError*) error;
 
 @end
 
@@ -68,14 +68,14 @@ extern NSString* const PersonaCancelNotification;
 {
 }
 
-- (id)    initWithOrigin:(NSString*)origin;
-- (void)  verifyAssertion: (NSString*) assertion againstServer: (NSURL*)server completionHandler: (URLConnectionHandler)completion;
-
-- (void) logout:(NSNotification *)notification;
-
+- (id)initWithOrigin:(NSString*)origin;
+- (void)verifyAssertion:(NSString*)assertion bodyFormat:(NSString*)format againstServer:(NSURL*)server completionHandler:(URLConnectionHandler)completion;
+- (void)verifyAssertion:(NSString*)assertion againstServer:(NSURL*)server completionHandler:(URLConnectionHandler)completion;
+- (void)logout:(NSNotification *)notification;
 
 @property (nonatomic,strong) UIWebView* webView;
-@property (nonatomic,weak) id<PersonaViewControllerDelegate> delegate;
+@property (nonatomic,strong) id<PersonaViewControllerDelegate> delegate;
 @property (nonatomic,strong) NSString* origin;
+@property (nonatomic,strong) NSString* assertion;
 
 @end
