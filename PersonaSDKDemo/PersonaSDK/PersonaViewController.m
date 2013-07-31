@@ -48,12 +48,18 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
 //  [super viewDidLoad];
 //}
 
-- (void) viewWillAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-  [super viewWillAppear:animated];
-  //tell the embedded uiwebview to reload the page
-  [_webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString: kPersonaSignInURL]]];
+	[super viewWillAppear:animated];
+	// add spinner
+	UIActivityIndicatorView* spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+	spinner.center = CGPointMake(self.view.frame.size.width / 2.0, self.view.frame.size.height / 2.0);
+	spinner.tag = 1313;
+	[spinner startAnimating];
+	[self.view addSubview:spinner];
 
+	//tell the embedded uiwebview to reload the page
+	[_webView loadRequest: [NSURLRequest requestWithURL: [NSURL URLWithString: kPersonaSignInURL]]];
 }
 
 //- (void) viewDidUnload
@@ -71,10 +77,14 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
   else NSLog(@"logout failed");
 }
 
-
 - (void)webViewDidFinishLoad:(UIWebView *)ourWebView
-{  
-  // Insert the code that will setup and handle the Persona callback.
+{
+	UIActivityIndicatorView* spinner = (UIActivityIndicatorView*)[self.view viewWithTag:1313];
+	if (spinner) {
+		[spinner removeFromSuperview];
+	}
+
+	// Insert the code that will setup and handle the Persona callback.
 	NSString* injectedCodePath = [[NSBundle mainBundle] pathForResource: @"assertion_inject" ofType: @"js"];
 	NSString* injectedCodeTemplate = [NSString stringWithContentsOfFile: injectedCodePath encoding:NSUTF8StringEncoding error: nil];
 	if (injectedCodeTemplate == nil) {
