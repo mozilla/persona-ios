@@ -19,28 +19,28 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
 @implementation PersonaViewController
 
 
-- (id) initWithOrigin:(NSString*)origin;
-  {
+- (id)initWithOrigin:(NSString*)origin
+{
     if (self = [super init])
     {
-      // Initialization code here
-      
-      _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-      _webView.delegate = self;
-      _webView.suppressesIncrementalRendering = YES;
-      _webView.scrollView.scrollEnabled = NO;
-      _webView.scalesPageToFit = YES;
-
-      self.view = _webView;
-      self.view.autoresizesSubviews = YES;
-      self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
-      _origin = origin;
-      [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(logout:) name: PersonaLogoutNotification object:nil];
-
+		// Initialization code here
+		
+		_webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+		_webView.delegate = self;
+		_webView.suppressesIncrementalRendering = YES;
+		_webView.scrollView.scrollEnabled = NO;
+		_webView.scalesPageToFit = YES;
+		_webView.backgroundColor = [UIColor blackColor];
+				
+		self.view = _webView;
+		self.view.autoresizesSubviews = YES;
+		self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+		
+		_origin = origin;
+		[[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(logout:) name: PersonaLogoutNotification object:nil];
     }
     return self;
-  }
+}
 
 
 //- (void) viewDidLoad
@@ -77,11 +77,11 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
   // Insert the code that will setup and handle the Persona callback.
 	NSString* injectedCodePath = [[NSBundle mainBundle] pathForResource: @"assertion_inject" ofType: @"js"];
 	NSString* injectedCodeTemplate = [NSString stringWithContentsOfFile: injectedCodePath encoding:NSUTF8StringEncoding error: nil];
-  if (injectedCodeTemplate == nil) {
-    NSLog(@"failed to load assertion_inject.js");
-    return;
-  }
-  
+	if (injectedCodeTemplate == nil) {
+		NSLog(@"failed to load assertion_inject.js");
+		return;
+	}
+	
 	NSString* injectedCode = [NSString stringWithFormat: injectedCodeTemplate, _origin];
   
 	NSString* result = [ourWebView stringByEvaluatingJavaScriptFromString: injectedCode];
@@ -90,7 +90,7 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
 }
 
 
-- (BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) interfaceOrientation
+- (BOOL)shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) interfaceOrientation
 {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -102,7 +102,7 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
 
 #pragma mark -
 
-- (void) verifyAssertion: (NSString*) assertion againstServer: (NSURL*)server completionHandler: (URLConnectionHandler)completion
+- (void)verifyAssertion:(NSString*)assertion againstServer:(NSURL*)server completionHandler:(URLConnectionHandler)completion
 {
     // POST the assertion to the verification endpoint. Then report back to our delegate about the
     // results.
@@ -112,38 +112,37 @@ static NSString* kPersonaSignInURL = @"https://login.persona.org/sign_in#NATIVE"
     NSString* jsonContent = [NSString stringWithFormat:@"{\"assertion\":\"%@\"}", assertion];
     
     [request setHTTPShouldHandleCookies: YES];
-    [request setHTTPMethod: @"POST"];
-    [request setHTTPBody: [jsonContent dataUsingEncoding: NSUTF8StringEncoding]];
-    [request setValue: @"application/json" forHTTPHeaderField: @"content-type"];
-    
-    [NSURLConnection sendAsynchronousRequest: request queue: [NSOperationQueue mainQueue]
-        completionHandler: completion];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[jsonContent dataUsingEncoding: NSUTF8StringEncoding]];
+
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
+						   completionHandler:completion];
 }
 
 
 
-- (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
 	NSURL* url = [request URL];
-    
+
 	// The JavaScript side (the code injected in viewDidLoad will make callbacks to this native code by requesting
 	// a PersonaViewController://callbackname/callback?data=foo style URL. So we capture those here and relay
 	// them to our delegate.
-	
+
 	if ([[[url scheme] lowercaseString] isEqualToString: @"personacallback"])
-	{	
+	{
 		if ([[url host] isEqualToString: @"gotassertion"])
-    {
-        NSString* assertion = [[url query] substringFromIndex: [@"data=" length]];
-        [_delegate personaViewController: self didSucceedWithAssertion: assertion];
+		{
+			NSString* assertion = [[url query] substringFromIndex: [@"data=" length]];
+			[_delegate personaViewController:self didSucceedWithAssertion:assertion];
 		}
 		
 		else if ([[url host] isEqualToString: @"failassertion"]) {
-			[_delegate personaViewController: self didFailWithReason: [[url query] substringFromIndex: [@"data=" length]]];
+			[_delegate personaViewController:self didFailWithReason:[[url query] substringFromIndex:[@"data=" length]]];
 		}
 
-    else if ([[url host] isEqualToString: @"logouteverywhere"]) {
-      [_delegate personaViewControllerDidSucceedLogout: self];
+		else if ([[url host] isEqualToString: @"logouteverywhere"]) {
+			[_delegate personaViewControllerDidSucceedLogout:self];
 		}
 
 		return NO;
